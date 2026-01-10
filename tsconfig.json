@@ -8,7 +8,6 @@
       "esnext"
     ],
     "jsx": "react-jsx",
-    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "outDir": "./dist",
     "strict": true,

@@ -8,8 +8,8 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-export async function GET(req: Request, { params }: { params: { companyId: string } }) {
-  const { companyId } = params;
+export async function GET(req: Request, { params }: { params: Promise<{ companyId: string }> }) {
+  const { companyId } = await params;
 
   if (!companyId) {
     return NextResponse.json({ error: 'Company ID is required' }, { status: 400 });

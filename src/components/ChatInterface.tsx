@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 
 interface ChatInterfaceProps {
   companyId: string; // Viktigt för att NORA ska veta vilken data hon ska söka i
+  onSignupClick?: () => void; // Ny prop för att hantera signup-klick
 }
 
 interface Message {
@@ -14,7 +15,7 @@ interface Message {
   sources?: string[];
 }
 
-export const ChatInterface: React.FC<ChatInterfaceProps> = ({ companyId }) => {
+export const ChatInterface: React.FC<ChatInterfaceProps> = ({ companyId, onSignupClick }) => {
   const [messages, setMessages] = useState<Message[]>([
     { role: 'assistant', content: 'Hej! Jag är NORA. Jag har läst på om er verksamhet. Vad vill du veta?' }
   ]);
@@ -172,12 +173,12 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ companyId }) => {
         </div>
         
         {isDemo && (
-          <a 
-            href={`/signup?companyId=${companyId}`}
+          <button 
+            onClick={() => onSignupClick ? onSignupClick() : window.location.href = `/signup?companyId=${companyId}`}
             className="hidden sm:flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
           >
             Spara min bot
-          </a>
+          </button>
         )}
       </div>
 
@@ -284,12 +285,12 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ companyId }) => {
         {isDemo && (
            <div className="mb-4 p-3 bg-violet-50 border border-violet-100 rounded-xl flex items-center justify-between gap-4 sm:hidden">
               <span className="text-sm text-violet-900 font-medium">Gillar du resultatet?</span>
-              <a 
-                href={`/signup?companyId=${companyId}`}
+              <button 
+                onClick={() => onSignupClick ? onSignupClick() : window.location.href = `/signup?companyId=${companyId}`}
                 className="px-3 py-1.5 bg-violet-600 text-white text-xs font-bold rounded-lg whitespace-nowrap"
               >
                 Installera nu
-              </a>
+              </button>
            </div>
         )}
         
