@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORA Widget Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f1f5f9;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        h1 { color: #0f172a; margin-bottom: 10px; }
+        p { line-height: 1.6; color: #64748b; }
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            font-family: monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Exempel på Kundhemsida</h1>
+        <p>Detta är en testsida för att visa hur NORA-widgeten ser ut när den är installerad.</p>
+        <p>Titta nere i högra hörnet! 👇</p>
+        
+        <div class="code-block">
+            &lt;script <br>
+            &nbsp;&nbsp;src="http://localhost:3000/widget.js" <br>
+            &nbsp;&nbsp;data-nora-id="DITT_UUID_HÄR"<br>
+            &gt;&lt;/script&gt;
+        </div>
+    </div>
+
+    <!-- NORA WIDGET START -->
+    <!-- OBS: Byt ut data-nora-id mot ditt faktiska ID från Supabase -->
+    <script 
+        src="/widget.js" 
+        data-nora-id="DITT_UUID_HÄR">
+    </script>
+    <!-- NORA WIDGET END -->
+
+</body>
+</html>

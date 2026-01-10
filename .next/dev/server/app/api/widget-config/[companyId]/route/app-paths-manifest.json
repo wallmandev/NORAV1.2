@@ -1,0 +1,3 @@
+{
+  "/api/widget-config/[companyId]/route": "app-edge-has-no-entrypoint"
+}

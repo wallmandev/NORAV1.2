@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "middleware": {},
+  "sortedMiddleware": [],
+  "functions": {
+    "/api/widget-config/[companyId]/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/server-reference-manifest.js",
+        "server/app/api/widget-config/[companyId]/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_api_widget-config_[companyId]_route_actions_e4df76eb.js",
+        "server/edge/chunks/node_modules_next_dist_esm_f0e7c37b._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_1fe0aaac._.js",
+        "server/edge/chunks/node_modules_next_dist_7bea040f._.js",
+        "server/edge/chunks/node_modules_@supabase_auth-js_dist_module_1590e343._.js",
+        "server/edge/chunks/node_modules_6e6673fa._.js",
+        "server/edge/chunks/[root-of-the-server]__3b6a2c08._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_388f12a4.js"
+      ],
+      "name": "app/api/widget-config/[companyId]/route",
+      "page": "/api/widget-config/[companyId]/route",
+      "matchers": [
+        {
+          "regexp": "^/api/widget-config/(?P<nxtPcompanyId>[^/]+?)(?:/)?$",
+          "originalSource": "/api/widget-config/[companyId]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "sXTgrsNudbxEz9+9wb0io+CkW7KNV/owvKsPW9rYzxQ=",
+        "__NEXT_PREVIEW_MODE_ID": "e1edde67c2c20bf13ea59dc7b3e4da8e",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "1a2f73ee6fc22e3a88d696eccd500fc08b6ec428d646898349f6cbeb3a8e428b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "87b1251de646b1bdcd5cc287a5569c85f08efdaf7efc7a0e80fbcd88d825b0a8"
+      }
+    }
+  }
+}
