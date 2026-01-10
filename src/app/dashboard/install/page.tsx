@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { Check, Copy, Code, Globe, ExternalLink } from 'lucide-react';
 
-export default function InstallPage() {
+export default function InstallWidgetPage() {
   const [supabase] = useState(() => createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder'
   ));
 
   const [copied, setCopied] = useState(false);

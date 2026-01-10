@@ -8,8 +8,8 @@ import { OnboardingLoader } from '@/components/OnboardingLoader';
 
 export default function DashboardOverview() {
   const [supabase] = useState(() => createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder'
   ));
 
   const [stats, setStats] = useState({ leads: 0, pages: 0 });

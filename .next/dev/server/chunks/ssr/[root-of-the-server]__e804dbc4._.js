@@ -437,7 +437,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$remark$2d$gf
 ;
 ;
 ;
-const ChatInterface = ({ companyId })=>{
+const ChatInterface = ({ companyId, onSignupClick })=>{
     const [messages, setMessages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([
         {
             role: 'assistant',
@@ -599,12 +599,12 @@ const ChatInterface = ({ companyId })=>{
                                     className: "text-white w-6 h-6"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 164,
                                     columnNumber: 14
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 162,
+                                lineNumber: 163,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -614,7 +614,7 @@ const ChatInterface = ({ companyId })=>{
                                         children: "NORA Demo"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 167,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -624,41 +624,41 @@ const ChatInterface = ({ companyId })=>{
                                                 className: "w-2 h-2 rounded-full bg-green-500 animate-pulse"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                                lineNumber: 168,
+                                                lineNumber: 169,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             "Online & Utbildad på din data"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 168,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 165,
+                                lineNumber: 166,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ChatInterface.tsx",
-                        lineNumber: 161,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    isDemo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: `/signup?companyId=${companyId}`,
+                    isDemo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>onSignupClick ? onSignupClick() : window.location.href = `/signup?companyId=${companyId}`,
                         className: "hidden sm:flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors",
                         children: "Spara min bot"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ChatInterface.tsx",
-                        lineNumber: 175,
+                        lineNumber: 176,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ChatInterface.tsx",
-                lineNumber: 160,
+                lineNumber: 161,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -681,18 +681,18 @@ const ChatInterface = ({ companyId })=>{
                                         className: "w-5 h-5 text-slate-500"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 198,
+                                        lineNumber: 199,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
                                         className: "w-5 h-5 text-violet-600"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 200,
+                                        lineNumber: 201,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 195,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -710,7 +710,7 @@ const ChatInterface = ({ companyId })=>{
                                                             ...props
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 216,
+                                                            lineNumber: 217,
                                                             columnNumber: 48
                                                         }, void 0),
                                                     ul: ({ node, ...props })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -718,7 +718,7 @@ const ChatInterface = ({ companyId })=>{
                                                             ...props
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 217,
+                                                            lineNumber: 218,
                                                             columnNumber: 49
                                                         }, void 0),
                                                     ol: ({ node, ...props })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -726,7 +726,7 @@ const ChatInterface = ({ companyId })=>{
                                                             ...props
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 218,
+                                                            lineNumber: 219,
                                                             columnNumber: 49
                                                         }, void 0),
                                                     li: ({ node, ...props })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -734,7 +734,7 @@ const ChatInterface = ({ companyId })=>{
                                                             ...props
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 219,
+                                                            lineNumber: 220,
                                                             columnNumber: 49
                                                         }, void 0),
                                                     strong: ({ node, ...props })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
@@ -742,7 +742,7 @@ const ChatInterface = ({ companyId })=>{
                                                             ...props
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 220,
+                                                            lineNumber: 221,
                                                             columnNumber: 53
                                                         }, void 0),
                                                     a: ({ node, ...props })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -752,25 +752,25 @@ const ChatInterface = ({ companyId })=>{
                                                             ...props
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 221,
+                                                            lineNumber: 222,
                                                             columnNumber: 48
                                                         }, void 0)
                                                 },
                                                 children: msg.content
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 214,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                            lineNumber: 212,
+                                            lineNumber: 213,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: msg.content
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                            lineNumber: 228,
+                                            lineNumber: 229,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         msg.role === 'assistant' && msg.sources && msg.sources.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -781,7 +781,7 @@ const ChatInterface = ({ companyId })=>{
                                                     children: "Källor:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                                    lineNumber: 234,
+                                                    lineNumber: 235,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -800,31 +800,31 @@ const ChatInterface = ({ companyId })=>{
                                                             children: hostname
                                                         }, i, false, {
                                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                                            lineNumber: 243,
+                                                            lineNumber: 244,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0));
                                                     })
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                                    lineNumber: 235,
+                                                    lineNumber: 236,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/ChatInterface.tsx",
-                                            lineNumber: 233,
+                                            lineNumber: 234,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 206,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, idx, true, {
                             fileName: "[project]/src/components/ChatInterface.tsx",
-                            lineNumber: 187,
+                            lineNumber: 188,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))),
                     isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -842,12 +842,12 @@ const ChatInterface = ({ companyId })=>{
                                     className: "w-5 h-5 text-violet-600"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                    lineNumber: 270,
+                                    lineNumber: 271,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 269,
+                                lineNumber: 270,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -857,46 +857,46 @@ const ChatInterface = ({ companyId })=>{
                                         className: "w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.3s]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 273,
+                                        lineNumber: 274,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.15s]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 274,
+                                        lineNumber: 275,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "w-2 h-2 bg-violet-400 rounded-full animate-bounce"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ChatInterface.tsx",
-                                        lineNumber: 275,
+                                        lineNumber: 276,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 272,
+                                lineNumber: 273,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ChatInterface.tsx",
-                        lineNumber: 264,
+                        lineNumber: 265,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: messagesEndRef
                     }, void 0, false, {
                         fileName: "[project]/src/components/ChatInterface.tsx",
-                        lineNumber: 279,
+                        lineNumber: 280,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ChatInterface.tsx",
-                lineNumber: 185,
+                lineNumber: 186,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -910,22 +910,22 @@ const ChatInterface = ({ companyId })=>{
                                 children: "Gillar du resultatet?"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 286,
+                                lineNumber: 287,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: `/signup?companyId=${companyId}`,
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>onSignupClick ? onSignupClick() : window.location.href = `/signup?companyId=${companyId}`,
                                 className: "px-3 py-1.5 bg-violet-600 text-white text-xs font-bold rounded-lg whitespace-nowrap",
                                 children: "Installera nu"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 287,
+                                lineNumber: 288,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ChatInterface.tsx",
-                        lineNumber: 285,
+                        lineNumber: 286,
                         columnNumber: 12
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -941,7 +941,7 @@ const ChatInterface = ({ companyId })=>{
                                 autoFocus: true
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 300,
+                                lineNumber: 301,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -952,30 +952,30 @@ const ChatInterface = ({ companyId })=>{
                                     className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ChatInterface.tsx",
-                                    lineNumber: 313,
+                                    lineNumber: 314,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatInterface.tsx",
-                                lineNumber: 308,
+                                lineNumber: 309,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ChatInterface.tsx",
-                        lineNumber: 296,
+                        lineNumber: 297,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ChatInterface.tsx",
-                lineNumber: 283,
+                lineNumber: 284,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ChatInterface.tsx",
-        lineNumber: 157,
+        lineNumber: 158,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -6,8 +6,8 @@ import { RefreshCw, FileText, Trash2, Globe, ExternalLink, Info } from 'lucide-r
 
 export default function KnowledgeBasePage() {
   const [supabase] = useState(() => createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder'
   ));
 
   const [documents, setDocuments] = useState<any[]>([]);
