@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { Check, Copy, Code, Globe, ExternalLink } from 'lucide-react';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
 export default function InstallPage() {
+  const [supabase] = useState(() => createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  ));
+
   const [copied, setCopied] = useState(false);
   const [companyId, setCompanyId] = useState<string | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);

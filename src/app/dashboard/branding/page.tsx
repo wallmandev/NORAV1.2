@@ -6,12 +6,12 @@ import { Palette, MessageSquare, Save, Check, AlertCircle, Upload, X, ImageIcon,
 import Cropper from 'react-easy-crop';
 import getCroppedImg from '@/utils/cropImage';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
 export default function BrandingPage() {
+  const [supabase] = useState(() => createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  ));
+
   const [primaryColor, setPrimaryColor] = useState('#7c3aed'); 
   const [botName, setBotName] = useState('NORA');
   const [welcomeMessage, setWelcomeMessage] = useState('Hej! Vad kan jag hjälpa dig med idag?');
@@ -366,9 +366,9 @@ export default function BrandingPage() {
       <div className="mt-8 lg:mt-0">
         <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Förhandsvisning</h3>
         
-        <div className="bg-slate-100 p-8 rounded-2xl border border-slate-200 flex items-center justify-center min-h-[400px]">
+        <div className="bg-slate-100 p-8 rounded-2xl border border-slate-200 flex items-center justify-center min-h-100">
           {/* Chat Mockup */}
-          <div className="w-[320px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-100 flex flex-col h-[450px]">
+          <div className="w-[320px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-100 flex flex-col h-112.5">
             {/* Header */}
             <div className="p-4 text-white flex items-center gap-3" style={{ backgroundColor: primaryColor }}>
               <div className="w-8 h-8 rounded-full bg-white/20 overflow-hidden flex items-center justify-center">

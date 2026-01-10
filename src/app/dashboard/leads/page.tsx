@@ -5,12 +5,6 @@ import { createClient } from '@supabase/supabase-js';
 import { Mail, Phone, Calendar, MessageSquare, ChevronDown, Archive } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// Setup Supabase client
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
 interface Lead {
   id: number;
   company_id: string;
@@ -22,6 +16,11 @@ interface Lead {
 }
 
 export default function LeadsPage() {
+  const [supabase] = useState(() => createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  ));
+
   const [leads, setLeads] = useState<Lead[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState<any>(null);

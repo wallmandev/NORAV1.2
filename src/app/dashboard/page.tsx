@@ -6,12 +6,12 @@ import { Users, FileText, Zap, ArrowRight, Code, Globe, Sparkles } from 'lucide-
 import Link from 'next/link';
 import { OnboardingLoader } from '@/components/OnboardingLoader';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
 export default function DashboardOverview() {
+  const [supabase] = useState(() => createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  ));
+
   const [stats, setStats] = useState({ leads: 0, pages: 0 });
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -211,7 +211,7 @@ export default function DashboardOverview() {
           </Link>
         </div>
 
-        <div className="bg-gradient-to-br from-violet-600 to-indigo-700 p-6 rounded-2xl shadow-lg text-white flex flex-col justify-between h-40 relative overflow-hidden">
+        <div className="bg-linear-to-br from-violet-600 to-indigo-700 p-6 rounded-2xl shadow-lg text-white flex flex-col justify-between h-40 relative overflow-hidden">
           <div className="relative z-10">
             <p className="text-sm font-medium text-violet-100">Status</p>
             <h3 className="text-2xl font-bold mt-1 flex items-center gap-2">

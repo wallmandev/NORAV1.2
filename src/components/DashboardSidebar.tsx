@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { LayoutDashboard, Database, MessageSquareText, Code, LogOut, Palette, GraduationCap } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const menuItems = [
   { icon: LayoutDashboard, label: 'Översikt', href: '/dashboard' },
@@ -16,11 +17,14 @@ const menuItems = [
 ];
 
 export function DashboardSidebar() {
+  const [supabase] = useState(() => createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  ));
   const pathname = usePathname();
   const router = useRouter();
 
   const handleSignOut = async () => {
-    const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
     await supabase.auth.signOut();
     router.push('/');
   };
