@@ -3,11 +3,6 @@ import { createClient } from '@supabase/supabase-js';
 
 export const runtime = 'edge';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
 export async function GET(req: Request, { params }: { params: Promise<{ companyId: string }> }) {
   const { companyId } = await params;
 
@@ -16,6 +11,21 @@ export async function GET(req: Request, { params }: { params: Promise<{ companyI
   }
 
   try {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+       console.error("Missing Supabase credentials in widget-config");
+       // Fallback för att inte krascha widgeten om configs saknas
+       return NextResponse.json({
+        branding_color: '#7c3aed',
+        bot_name: 'NORA',
+        welcome_message: 'Hej! Vad kan jag hjälpa dig med idag?'
+      });
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     const { data, error } = await supabase
       .from('companies')
       .select('branding_color, bot_name, welcome_message')
