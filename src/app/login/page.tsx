@@ -25,6 +25,14 @@ function LoginForm() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check configuration
+    const sbUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    if (!sbUrl || sbUrl.includes('placeholder')) {
+      setErrorMsg("Konfigurationsfel: Koppling till databas saknas (Miljövariabler ej inställda på Vercel).");
+      return;
+    }
+
     setLoading(true);
     setErrorMsg(null);
 

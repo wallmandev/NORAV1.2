@@ -14,8 +14,10 @@ export default function InstallWidgetPage() {
   const [companyId, setCompanyId] = useState<string | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
   const [verified, setVerified] = useState<boolean | null>(null);
+  const [origin, setOrigin] = useState('');
 
   useEffect(() => {
+    setOrigin(window.location.origin);
     const getUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (user) setCompanyId(user.id);
@@ -24,7 +26,7 @@ export default function InstallWidgetPage() {
   }, []);
 
   const embedCode = `<script 
-  src="https://nora-ai.vercel.app/widget.js" 
+  src="${origin || 'https://din-sida.se'}/widget.js" 
   data-company-id="${companyId || 'DIN-ID-HÄR'}"
   defer
 ></script>`;
