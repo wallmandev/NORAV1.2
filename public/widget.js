@@ -8,8 +8,10 @@
    */
 
   // 1. Konfiguration & Setup
-  const currentScript = document.currentScript || document.querySelector('script[data-nora-id]');
-  const COMPANY_ID = currentScript ? currentScript.getAttribute('data-nora-id') : null;
+  // Vi letar i första hand efter data-company-id (det som dashboarden genererar)
+  const currentScript = document.currentScript || document.querySelector('script[data-company-id]') || document.querySelector('script[data-nora-id]');
+  
+  const COMPANY_ID = currentScript ? (currentScript.getAttribute('data-company-id') || currentScript.getAttribute('data-nora-id')) : null;
   
   // Bestäm Base URL baserat på var scriptet laddas ifrån
   let BASE_URL = '';
@@ -23,7 +25,7 @@
   }
 
   if (!COMPANY_ID) {
-    console.error("NORA Widget Error: Attributet 'data-nora-id' saknas på script-taggen.");
+    console.error("NORA Widget Error: Attributet 'data-company-id' (eller 'data-nora-id') saknas på script-taggen.");
     return;
   }
 
